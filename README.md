@@ -19,13 +19,6 @@ run_SG1        % builds the model and solves both flow rates -> results/SG1_low.
 analyse_SG1    % arrival velocities and filling durations    -> results/SG1_summary.csv, SG1_filling_duration.csv
 ```
 
-Expected output of `analyse_SG1`:
-
-| Flow rate (µL/s) | v_arrival, exponential (µm/s) | v_arrival, sigmoidal (µm/s) | ΔT_f, exponential (s) | ΔT_f, sigmoidal (s) |
-|---|---|---|---|---|
-| 0.142 | 37.12 | 35.19 | 28.5 | 24.0 |
-| 0.284 | 73.49 | 69.88 | 13.1 | 11.0 |
-
 ## Files
 
 | File | Content |
@@ -36,7 +29,7 @@ Expected output of `analyse_SG1`:
 | `src/assign_pores.m` | Pore assignment and hydraulic and diffusion coefficients |
 | `src/pore_storage.m` | Pore storage volume of the nodes of K |
 | `src/solve_transport.m` | Steady flow and transient transport |
-| `src/setup_complex.m`, `read_tess.m`, `vgeo.m`, `vcon.m`, `v2f.m`, `fcon.m`, `fgeo2026.m`, `build_BO.m` | Cell complexes, geometry and boundary operators, from [CMC-AdvDiff](https://github.com/boompiet/CMC-AdvDiff) (comments shortened) |
+| `src/setup_complex.m`, `read_tess.m`, `vgeo.m`, `vcon.m`, `v2f.m`, `fcon.m`, `fgeo2026.m`, `build_BO.m` | Cell complexes, geometry and boundary operators, from [CMC-AdvDiff](https://github.com/boompiet/CMC-AdvDiff) |
 | `data/SG1.tess` | Laguerre tessellation generated with Neper |
 | `data/SG_voluminous_pores.csv` | Volumes of the voluminous pores (µm³) |
 | `data/SG_sheet_pores_cdf.csv` | Volume (µm³) and cumulative probability of the sheet-like pores |
